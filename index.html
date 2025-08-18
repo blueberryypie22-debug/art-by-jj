@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+ 
+ <html lang="en">
+ <head>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Art by JJ</title> 
+
+    <style>
+        body { /*body settings*/
+            margin: 0;
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            background: url('blackbackground.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Top bar settings*/
+        .top-bar {
+            background-color: black;
+            padding: 8px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .top-bar a { /*class selector for all top-bars with class="top-bar"
+            a means it will apply the styles only to <a> tags (links), top and 
+            bottom text is links because of the <a> tag*/
+            color: white;
+            text-decoration: none; /*removes automatic underline from links*/
+            padding: 8px 15px;
+            background-color: #000000;
+            border-radius: 0px; /*creates rounded edges*/
+            transition: background-color 0.3s; /*for smooth animation*/
+        }
+        .top-bar a:hover {
+            background-color: #766560;
+        }
+
+        /* Bottom bar */
+        .bottom-bar {
+            color: rgb(255, 255, 255);
+            background-color: black;
+            padding: 10px;
+            position: fixed; /*position of content inside*/
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+         
+        .main-headline {/* Main headline */
+            text-align: center;
+            font-size: 5em;
+            font-style: italic;
+            margin-top: 30vh;
+            margin-bottom: 25vh;
+            transform: translateY(-50%);
+            text-shadow: 5px 5px 10px rgb(255, 255, 255);
+        }
+        
+        /* Section for art; first and second painting  */
+        .section1 {
+            background-image: url("sectionbackground.png");
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            padding: 30px; 
+            max-width: 500px;
+            margin: 30px auto; /*spacking between the section and other elements*/
+            border-radius: 10px;
+        }
+        .section1 h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 6px #959595;
+        }
+        .section1 img { /*image settings in section 1*/
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 70%;
+            height: auto;
+            border: 3px solid rgb(0, 0, 0); /*make this border different*/
+            border-radius: 8px;
+        }
+        .section1 h2 { 
+           text-align: left;
+            margin: 20px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: white; /* or whatever fits your design */
+            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+        }
+        
+        .almendra-regular {
+            font-family: "Almendra", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .section2 {
+            background-image: url("sectionbackground.png");
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            padding: 30px; 
+            max-width: 500px;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+
+        .section2 h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section2 img {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 3px solid rgb(30, 30, 30); 
+            border-radius: 8px;
+        
+        }
+        .section2 h2 {/*piece headline settings of section 2*/
+           text-align: left;
+            margin: 20px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: white; /* or whatever fits your design */
+            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+        }
+
+        .section3 {
+            background-image: url("negativebackground.png");
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            padding: 30px; 
+            max-width: 500px;
+            margin: 30px auto; /*spacking between the section and other elements*/
+            border-radius: 10px;
+        }
+        .section3 h1 { /*series header*/
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 6px #1d1d1d;
+        }
+        .section3 img { /*image settings in section 1*/
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 70%;
+            height: auto;
+            border: 3px solid rgb(30, 30, 30); /*make this border different*/
+            border-radius: 8px;
+        }
+         .section3 h2 { 
+            text-align: left;
+            margin: 20px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: white; /* or whatever fits your design */
+            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+        }
+
+        .almendra-regular {
+            font-family: "Almendra", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .p1 {font-family: "Times New Roman", Times, serif;
+        }
+        
+
+         /* Clickable images */
+        .clickable-image {
+         cursor: pointer;
+          transition: transform 0.3s;
+        }
+
+        .clickable-image:hover {
+          transform: scale(1.02);
+        }
+
+         /* Modal (fullscreen background) */
+        .modal { /*image display settings*/
+             display: none; /* Hidden by default */
+             position: fixed;
+             z-index: 2000;
+             padding-top: 50px;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.9);
+        }
+
+        /* Modal image */
+          .modal-content {
+              margin: auto;
+              display: block;
+              max-width: 90%;
+              max-height: 90%;
+        }
+
+          /* Close button */
+        .close {
+              position: absolute;
+              top: 20px;
+              right: 35px;
+              color: white;
+              font-size: 40px;
+              font-weight: bold;
+              cursor: pointer;
+        }
+        .close:hover {
+              color: #ccc;
+        }
+                
+
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;}
+            
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar content-->
+    <div class="top-bar">
+        <a href="#" class="almendra-regular">Sign Up</a>
+        <a href="#" class="almendra-regular">About</a>
+    </div>
+
+    <!-- Main Headline -->
+    <div class="main-headline" >
+        Art by JJ
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <!-- Art Section 1 -->
+    <div class="section1">
+        <h1 class="p1"><b>The <i>House</i> Series</b></h1> 
+        <img src= "bathroom.png" class="clickable-image" >
+        <h2 class="p1">
+            <b>The Bathroom</b>
+        </h2>
+        </div>
+        <div class="section1">
+        <img src= "kitchen.png" class="clickable-image" >
+        <h2 class="p1">
+            <b>The Kitchen</b>
+        </h2>
+    </div>
+
+    <!-- Art Section 2 -->
+    <div class="section2"> 
+        <img src= "bedroom.png" class="clickable-image">
+         <h2 class="p1">
+            <b>The Bedroom</b>
+         </h2>
+    </div>
+
+    <!-- Art Section 3 -->
+    <div class="section3"> 
+        <h1 class="p1"><b>The <i>Sheffield</i> Series</b></h1>  
+        <img src= "chatsworth.png" class="clickable-image" >
+        <h2 class="p1"> 
+        <b>Chatsworth House </b>
+        </h2>
+     </div>
+     <div class="section3">  
+        <img src= "mushroomlane.png" class="clickable-image" >
+        <h2 class="p1"> Mushroomlane </h2>
+     </div>
+
+   <script>
+       // Get modal elements
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("fullImage");
+      const closeBtn = document.getElementsByClassName("close")[0];
+
+      // When an image is clicked
+      document.querySelectorAll('.clickable-image').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+        });
+
+      // Close modal when clicking X
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // Close modal when clicking outside the image
+      modal.onclick = function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+      }
+
+    </script>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar"  >
+        <a class="p1"> Contact : blueberryypie22@gmail.com</a>
+    </div>
+
+</body>
+</html>
