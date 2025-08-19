@@ -87,9 +87,10 @@
             border-radius: 10px;
         }
         .section1 h1 {
+            color: #ffffff;
             text-align: center;
             margin-bottom: 30px;
-            text-shadow: 5px 5px 6px #959595;
+            text-shadow: 5px 5px 6px #000000;
         }
         .section1 img { /*image settings in section 1*/
             display: block;
@@ -104,8 +105,9 @@
             margin: 20px;
             margin-top: 10px;
             font-size: 1.2em;
-            color: white; /* or whatever fits your design */
-            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+            color: rgb(255, 255, 255); /* or whatever fits your design */
+            text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
+            text-align: left;
         }
         
         .almendra-regular {
@@ -145,6 +147,7 @@
             font-size: 1.2em;
             color: white; /* or whatever fits your design */
             text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+            text-align: left;
         }
 
         .section3 {
@@ -178,6 +181,7 @@
             font-size: 1.2em;
             color: white; /* or whatever fits your design */
             text-shadow: 2px 2px 5px black; /* makes it readable on any background */
+            text-align: left;
         }
 
         .almendra-regular {
@@ -235,26 +239,26 @@
         .close:hover {
               color: #ccc;
         }
-                
 
-        aside {
-            width: 30%;
-            padding-left: 15px;
-            margin-left: 15px;
-            float: right;
-            font-style: italic;
-            background-color: lightgray;}
             
     </style>
 </head>
 
 <body>
 
-    <!-- Top Bar content-->
+    <!-- Top Bar content
     <div class="top-bar">
-        <a href="#" class="almendra-regular">Sign Up</a>
+        <a href="#" class="almendra-regular">Contact</a>
         <a href="#" class="almendra-regular">About</a>
+    </div> -->
+
+    <!-- Top Bar content -->
+    <div class="top-bar">
+        <a href="contact.html" class="almendra-regular">Contact</a>
+        <a href="index.html" class="almendra-regular">Gallery</a>
+        <a href="about.html" class="almendra-regular">About</a>
     </div>
+
 
     <!-- Main Headline -->
     <div class="main-headline" >
@@ -273,8 +277,9 @@
         <h2 class="p1">
             <b>The Bathroom</b>
         </h2>
-        </div>
-        <div class="section1">
+    </div>
+
+    <div class="section1">
         <img src= "kitchen.png" class="clickable-image" >
         <h2 class="p1">
             <b>The Kitchen</b>
@@ -299,7 +304,7 @@
      </div>
      <div class="section3">  
         <img src= "mushroomlane.png" class="clickable-image" >
-        <h2 class="p1"> Mushroomlane </h2>
+        <h2 class="p1"> Mushroom lane </h2>
      </div>
 
    <script>
@@ -332,7 +337,7 @@
 
     <!-- Bottom Bar -->
     <div class="bottom-bar"  >
-        <a class="p1"> Contact : blueberryypie22@gmail.com</a>
+        <a class="p1"> </a>
     </div>
 
 </body>

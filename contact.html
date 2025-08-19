@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- if you want same styling -->
+     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">>
+
+      <title>Art by JJ</title> 
+      <style>
+       body { /*body settings*/
+            margin: 0;
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            background: url('contact.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background-color: black;
+            padding: 8px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #000000;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .top-bar a:hover {
+            background-color: #766560;
+        }
+
+        /* Bottom bar */
+        .bottom-bar {
+            color: rgb(255, 255, 255);
+            background-color: black;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Main headline */
+        .main-headline {
+           text-align: center;
+            font-size: 5em;
+            font-style: italic;
+            margin-top: 30vh;
+            margin-bottom: 25vh;
+            transform: translateY(-50%);
+            text-shadow: 5px 5px 10px rgb(255, 255, 255);
+        }
+
+        .section1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 6px #000000;
+        }
+
+        .section1 h2{
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 6px #000000;}
+        
+        .button { /*tag for button only*/
+            text-align: center;
+            background: none; 
+            color: white; /*text colour*/
+            text-decoration: none; /*removes automatic underline from links*/
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #000000;
+            border:none;
+            border-radius: 0px; /*creates rounded edges*/
+            transition: background-color 0.3s; /*for smooth animation*/}  
+
+        .button:hover {
+            background-color: #766560;
+        }
+        
+         .almendra-regular {
+            font-family: "Almendra", serif;
+            font-weight: 400;
+            font-style: normal;}
+
+        .p1 {font-family: "Times New Roman", Times, serif;
+        }
+        
+    
+    </style>
+            
+</head>
+
+<body>
+
+   <!-- Top Bar content -->
+    <div class="top-bar">
+        <a href="contact.html" class="almendra-regular">Contact</a>
+        <a href="index.html" class="almendra-regular">Gallery</a>
+        <a href="about.html" class="almendra-regular">About</a>
+        
+    </div>
+
+
+    <!-- Main Headline -->
+    <div class="main-headline" >
+        Art by JJ
+    </div>
+
+    <div class="section1" > 
+        <h2 class="almendra-regular">Type your messege here</h2>
+    </div>
+
+    <!-- Contact Form -->
+   <form action=""https://getform.io/f/arogylmb" method="POST" class="section1">
+     <div><label class="almendra-regular" for="name">Name:</label>
+     <input class="p1" type="text" id="name" name="name" required></div>
+    <br>
+     <div><label class="almendra-regular" for="email">Email:</label>
+     <input class="p1" type="email" id="email" name="_replyto" required></div>
+    <br>
+     <div><label class="almendra-regular" for="message">Message:</label>
+     <textarea class="p1" id="message" name="message" rows="5" cols="25" required></textarea></div>
+    <br>
+     <div> 
+        <button class="almendra-regular button" type="submit">Send</button>
+    </div>
+    </form>
+
+        <!-- Bottom Bar -->
+    <div class="bottom-bar"  >
+        <a class="p1"> </a>
+    </div>
+    
+</body>
+</html>
