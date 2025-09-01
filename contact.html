@@ -19,6 +19,18 @@
             background-size: cover;
             max-width: 100%;
         }
+        /*for mobile*/
+        @media (max-width: 600px) {
+        body { /*body settings*/
+            margin: 0;
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            background: url('contactmobile.png') no-repeat center center fixed;
+            background-size: cover;
+            max-width: 100%;
+        }}
 
         /* Top bar */
         .top-bar {
@@ -147,11 +159,7 @@
          <label class="almendra-regular" for="email">Email:</label>
          <input class="p1" type="email" id="email" name="_replyto" required>
        </div><br>
-
-       <!--sent notification-->
-       <div id="form-message" style="display:none; color: lightgreen; margin-top: 10px;">
-         Message sent!
-       </div>
+       
 
        <div>
          <label class="almendra-regular" for="message">Message:</label>
@@ -163,32 +171,6 @@
         </div>
     </form>
     
-    <script>
-document.getElementById("contact-form").addEventListener("submit", async function(event) {
-    event.preventDefault(); // stop normal form redirect
-
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-        // Send data to Getform
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-            document.getElementById("form-message").style.display = "block"; // show success message
-            form.reset(); // clear form
-        } else {
-            alert("Something went wrong. Please try again.");
-        }
-    } catch (error) {
-        alert("Error submitting form.");
-    }
-});
-</script>
     
 </body>
 </html>

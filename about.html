@@ -9,7 +9,7 @@
 
       <title>Art by JJ</title> 
       <style>
-       body { /*body settings*/
+       body { /*body settings for pc*/
             margin: 0;
             font-family: "Jacquard 24", system-ui;
             font-weight: 400;
@@ -17,7 +17,20 @@
             color: black;
             background: url('contact.png') no-repeat center center fixed;
             background-size: cover;
+            max-width: 100%;
         }
+
+        /*for mobile*/
+        @media (max-width: 600px) {body{
+             margin: 0;
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            background: url('contactmobile.png') no-repeat center center fixed;
+            background-size: cover;
+            max-width: 100%;
+          }}
 
         /* Top bar */
         .top-bar {
@@ -59,17 +72,33 @@
          /* Section for art; first and second painting  */
 
         
-        .section1 h2 { 
-            align-content: center;
-           text-align: left;
+        .section1 h2 { /*for pc*/
+            align-items: center;
             margin: auto;
+            margin-left: 25%;
+            margin-right: 20%;
             margin-top: 10px;
             font-size: 1.2em;
             color: rgb(255, 255, 255); /* or whatever fits your design */
             text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
             max-width: 800px;
         }
-                 .almendra-regular {
+
+        /*for mobile*/
+        @media (max-width: 600px) { 
+          .section1 h2 {    
+           align-items: center;
+            margin: auto;
+            margin-left: 25%;
+            margin-right: 20%;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: rgb(255, 255, 255); /* or whatever fits your design */
+            text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
+            max-width: 800px;
+          }}
+
+          .almendra-regular {
             font-family: "Almendra", serif;
             font-weight: 400;
             font-style: normal;}
