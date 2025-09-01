@@ -12,9 +12,10 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Art by JJ</title> 
+    <!--https://blueberryypie22-debug.github.io/art-by-jj-->
 
-    <style>
-        body { /*body settings*/
+    <style> 
+        body { /*body settings*//*for pc*/
             margin: 0;
             font-family: "Jacquard 24", system-ui;
             font-weight: 400;
@@ -22,6 +23,19 @@
             color: black;
             background: url('blackbackground.png') no-repeat center center fixed;
             background-size: cover;
+        }
+        
+        /*for mobile*/
+        @media (max-width: 600px) {
+        body {
+            margin: 0;
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 40%;
+            font-style: normal;
+            color: black;
+            background: url('blackbackgroundmobile.png') no-repeat center center fixed;
+            background-size: cover;
+            }
         }
 
         /* Top bar settings*/
@@ -76,7 +90,7 @@
         }
         
         /* Section for art; first and second painting  */
-        .section1 {
+        .section1 {/*for pc*/
             background-image: url("sectionbackground.png");
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
@@ -89,12 +103,24 @@
             image-rendering: crisp-edges;
             image-rendering: -webkit-optimize-contrast;
         }
-        .section1 h1 {
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 5px 5px 6px #000000;
+
+        /*for mobile*/
+        @media (max-width: 600px) {
+        .section1 {
+            background-image: url("sectionbackgroundmobile.png");
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            padding: 30px; 
+            max-width: 500px;
+            margin: 30px auto; /*spacking between the section and other elements*/
+            border-radius: 10px;
+            background-attachment: fixed;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
         }
+    }
+
         .section1 img { /*image settings in section 1*/
             display: block;
             margin: 0 auto 20px auto;
