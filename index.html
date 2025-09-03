@@ -16,25 +16,22 @@
 
     <style> 
         body { /*body settings*//*for pc*/
-            margin: 0;
-            font-family: "Jacquard 24", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            color: black;
             background: url('blackbackground.png') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            max-width: 500px;
+            margin: 30px auto;
         }
-        
-        /*for mobile*/
+                
         @media (max-width: 600px) {
-        body {
-            margin: 0;
-            font-family: "Jacquard 24", system-ui;
-            font-weight: 40%;
-            font-style: normal;
-            color: black;
+        body {/*for mobile*/
             background: url('blackbackgroundmobile.png') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            max-width: 600px;
+            margin: 30px auto;
             }
         }
 
@@ -80,6 +77,10 @@
 
          
         .main-headline {/* Main headline */
+            font-family: "Jacquard 24", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
             text-align: center;
             font-size: 5em;
             font-style: italic;
@@ -87,6 +88,7 @@
             margin-bottom: 25vh;
             transform: translateY(-50%);
             text-shadow: 5px 5px 10px rgb(255, 255, 255);
+            padding: 30px; 
         }
         
         /* Section for art; first and second painting  */
@@ -97,28 +99,24 @@
             background-repeat: no-repeat; /* prevents tiling/repeating */
             padding: 30px; 
             max-width: 500px;
-            margin: 30px auto; /*spacking between the section and other elements*/
+            margin: 30px auto;
             border-radius: 10px;
-            background-attachment: fixed;
-            image-rendering: crisp-edges;
-            image-rendering: -webkit-optimize-contrast;
         }
 
-        /*for mobile*/
         @media (max-width: 600px) {
-        .section1 {
-            background-image: url("sectionbackgroundmobile.png");
+        .section1 {/*for mobile*/
+            background-image: url("sectionbackground.png");
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
             background-repeat: no-repeat; /* prevents tiling/repeating */
             padding: 30px; 
-            max-width: 500px;
             margin: 30px auto; /*spacking between the section and other elements*/
             border-radius: 10px;
-            background-attachment: fixed;
-            image-rendering: crisp-edges;
-            image-rendering: -webkit-optimize-contrast;
-        }}
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+
+        }
+}
         
         .section1 h1 {
             text-align: center;
