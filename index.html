@@ -5,18 +5,21 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet"> <!--ballet font-->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> By iblueberryypie22 </title> 
+
+
+    <title> iBlueberryypie22</title> 
     <!--https://blueberryypie22-debug.github.io/art-by-jj-->
 
     <style> 
         body { /*body settings*//*for pc*/
-            background: url('blackbackground.png') no-repeat center center fixed;
+            background: url('digiWallpaper3.png') no-repeat center center fixed;
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
             background-repeat: no-repeat; /* prevents tiling/repeating */
@@ -77,46 +80,30 @@
 
          
         .main-headline {/* Main headline */
-            font-family: "Jacquard 24", system-ui;
-            font-weight: 400;
-            font-style: normal;
+            font-family: "Ballet", system-ui;
+            font-weight: 600;
+            font-style: bold;
             color: black;
             text-align: center;
             font-size: 5em;
-            font-style: italic;
-            margin-top: 30vh;
-            margin-bottom: 25vh;
-            transform: translateY(-50%);
-            text-shadow: 5px 5px 10px rgb(255, 255, 255);
-            padding: 30px; 
-        }
-     
-     @media (max-width: 600px){.main-headline {/* For mobile */
-            font-family: "Jacquard 24", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            color: black;
-            text-align: center;
-            font-size: 5em;
-            font-style: italic;
-            margin-top: 30vh;
-            margin-bottom: 25vh;
-            transform: translateY(-50%);
-            text-shadow: 5px 5px 10px rgb(255, 255, 255);
-            padding: 30px; 
-        }}
-        
-        /* Section for art; first and second painting  */
-        .section1 {/*for pc*/
-            background-image: url("sectionbackground.png");
+            /*margin-top: 10vh;
+            margin-bottom: 25vh;*/
+            /* The section takes the full width of the viewport/parent */
+            width: 1470px;
+            /* Define the specific height you want for your rectangle */
+            height: 620px; /* Adjust this value as needed */
+            transform: translateX(-33.5%);
+            text-shadow: 1px 1px 5px rgb(255, 255, 255);
+            background-image: url("logoBackground.jpg");
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
-            background-repeat: no-repeat; /* prevents tiling/repeating */
-            padding: 30px; 
-            max-width: 500px;
-            margin: 30px auto;
-            border-radius: 10px;
+            border: 10px ridge #000000; /* Width, Style, Color */
+            /*border: 20px solid transparent; /* Required for border-image 
+            border-image: url("vintageBorder2 T.jpg") 30 stretch;*/
+            
         }
+        
+        /* Section for art; first and second painting  */
           /*
         @media (max-width: 600px) {
         .section1 {/*for mobile
@@ -133,114 +120,72 @@
         }
         }*/
         
-        .section1 h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            margin-top: 10px;
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        .header1 {
+            font-family: "Almendra", serif;
+            font-size: 2em;
+            font-style: bold;
+            text-align: left;
+            color: rgba(0, 0, 0);
+            transform: translateX(-80%);
+        }
+        /*section dividers, Solid border */
+        hr.rounded {
+            border-top: 4px solid #000000;;
+            border-radius: 5px;
+            transform: translateX(-32%);
+            width: 1300px;
+        }
+        
+        .header2 { 
+            font-family: "Almendra", serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: left;
+            font-style: bold;
+            text-decoration: underline;
+            color: rgb(0, 0, 0); /* or whatever fits your design */
+            transform: translateX(-65%);
         }
 
-        .section1 img { /*image settings in section 1*/
-            display: block;
-            margin: 0 auto 20px auto;
-            max-width: 70%;
+        .container1{
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 1470px;
+            max-width: 1400px;
+            justify-content: center;
+            align-items: flex-start;
+            transform: translateX(-32%);
+            
+        }
+        .container1 div {
+            max-width: 300px;
             height: auto;
-            border: 3px solid rgb(0, 0, 0); /*make this border different*/
-            border-radius: 8px;
+            margin: 5px;
+            border: 10px ridge #000000; 
         }
-        .section1 h2 { 
-           text-align: left;
-            margin: 20px;
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: rgb(255, 255, 255); /* or whatever fits your design */
-            text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
-            text-align: left;
-        }
+
+        .container1 img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+       }
+
         
         .almendra-regular {
             font-family: "Almendra", serif;
             font-weight: 400;
             font-style: normal;
         }
+
         
-        .section2 {
-            background-image: url("sectionbackground.png");
-            background-size: cover;   /* makes the image cover the whole section */
-            background-position: center; /* keeps the image centered */
-            background-repeat: no-repeat; /* prevents tiling/repeating */
-            padding: 30px; 
-            max-width: 500px;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
-
-        .section2 h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .section2 img {
-            display: block;
-            margin: 0 auto 20px auto;
-            max-width: 100%;
-            height: auto;
-            border: 3px solid rgb(30, 30, 30); 
-            border-radius: 8px;
-        
-        }
-        .section2 h2 {/*piece headline settings of section 2*/
-           text-align: left;
-            margin: 20px;
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: white; /* or whatever fits your design */
-            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
-            text-align: left;
-        }
-
-        .section3 {
-            background-image: url("negativebackground.png");
-            background-size: cover;   /* makes the image cover the whole section */
-            background-position: center; /* keeps the image centered */
-            background-repeat: no-repeat; /* prevents tiling/repeating */
-            padding: 30px; 
-            max-width: 500px;
-            margin: 30px auto; /*spacking between the section and other elements*/
-            border-radius: 10px;
-        }
-        .section3 h1 { /*series header*/
-            color: white;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 5px 5px 6px #1d1d1d;
-        }
-        .section3 img { /*image settings in section 1*/
-            display: block;
-            margin: 0 auto 20px auto;
-            max-width: 70%;
-            height: auto;
-            border: 3px solid rgb(30, 30, 30); /*make this border different*/
-            border-radius: 8px;
-        }
-         .section3 h2 { 
-            text-align: left;
-            margin: 20px;
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: white; /* or whatever fits your design */
-            text-shadow: 2px 2px 5px black; /* makes it readable on any background */
-            text-align: left;
-        }
-
-        .almendra-regular {
-            font-family: "Almendra", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .p1 {font-family: "Times New Roman", Times, serif;
-        }
+        .ballet-uniquifier {
+           font-family: "Ballet", cursive;
+           font-optical-sizing: auto;
+           font-weight: 400;
+           font-style: normal;
+         }
         
 
          /* Clickable images */
@@ -295,66 +240,71 @@
 
 <body>
 
-    <!-- Top Bar content
-    <div class="top-bar">
-        <a href="#" class="almendra-regular">Contact</a>
-        <a href="#" class="almendra-regular">About</a>
-    </div> -->
 
     <!-- Top Bar content -->
-    <div class="top-bar">
-        <a href="contact.html" class="almendra-regular">Contact</a>
-        <a href="index.html" class="almendra-regular">Gallery</a>
-        <a href="about.html" class="almendra-regular">About</a>
+    <div class = "top-bar">
+        <a href = "index.html" class="almendra-regular">Gallery</a>
+        <a href = "blog.html" class="almendra-regular">Blog</a>
+        <a href = "about.html" class="almendra-regular">About</a>
+        <a href = "contact.html" class="almendra-regular">Contact</a>
     </div>
 
 
     <!-- Main Headline -->
-    <div class="main-headline" >
-        By iBlueberryy pie
+    <div class = "main-headline" >
+        <br>
+        iBlueberryypie
+        <br>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class = "header1"> <b> Collections</b> <br> </div>
+    <hr class="rounded">
+    <br>    
+    
+    <div class = header2> Prints </div>
+    <div class = "container1">
+        <div><img src= "digiWallpaper1.png" class="clickable-image" > </div>
+        <div><img src= "digiwallpaper2_03.jpg" class="clickable-image" > </div>
+        <div><img src= "blogwallmini.jpg" class="clickable-image" > </div>
+        <div><img src= "tiles13.png" class="clickable-image" > </div>
+        <div><img src= "BOtile.png" class="clickable-image" > </div>
+        <div><img src= "projectAnimal.jpg" class="clickable-image" > </div>
+        
+    </div>
+
+    <br>
+    <br>
+
+    <div class = header2> The House Series </div>
+    <div class = "container1">
+        <div><img src= "bathroom.png" class="clickable-image" > </div>
+        <div><img src= "kitchen.png" class="clickable-image" > </div>
+        <div><img src= "bedroom.png" class="clickable-image"></div>
+    </div>
+
+    <br>
+    <br>
+    
+        <div class = header2> Sheffield Series </div>
+    <div class = "container1">
+        <div><img src= "chatsworth.png" class="clickable-image" > </div>
+        <div><img src= "mushroomlane.png" class="clickable-image" > </div>
+        <div><img src= "Edalejpg.jpg" class="clickable-image" > </div>
+        <div><img src= "devonshire.jpg" class="clickable-image" > </div>
+    </div>
+
 
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="fullImage">
     </div>
 
-    <!-- Art Section 1 -->
-    <div class="section1">
-        <h1 class="p1"><b>The <i>House</i> Series</b></h1> 
-        <img src= "bathroom.png" class="clickable-image" >
-        <h2 class="p1">
-            <b>The Bathroom</b>
-        </h2>
-    </div>
-
-    <div class="section1">
-        <img src= "kitchen.png" class="clickable-image" >
-        <h2 class="p1">
-            <b>The Kitchen</b>
-        </h2>
-    </div>
-
-    <!-- Art Section 2 -->
-    <div class="section2"> 
-        <img src= "bedroom.png" class="clickable-image">
-         <h2 class="p1">
-            <b>The Bedroom</b>
-         </h2>
-    </div>
-
-    <!-- Art Section 3 -->
-    <div class="section3"> 
-        <h1 class="p1"><b>The <i>Sheffield</i> Series</b></h1>  
-        <img src= "chatsworth.png" class="clickable-image" >
-        <h2 class="p1"> 
-        <b>Chatsworth House </b>
-        </h2>
-     </div>
-     <div class="section3">  
-        <img src= "mushroomlane.png" class="clickable-image" >
-        <h2 class="p1"> Mushroom lane </h2>
-     </div>
+    
 
    <script>
        // Get modal elements
@@ -391,8 +341,3 @@
 
 </body>
 </html>
-
-
-
-
-

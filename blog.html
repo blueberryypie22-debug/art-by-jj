@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+ 
+ <html lang="en">
+ <head>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet"> <!--ballet font-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> iBlueberryypie22</title> 
+    <!--https://blueberryypie22-debug.github.io/art-by-jj-->
+
+    <style> 
+        body { /*body settings*//*for pc*/
+            background: url('digiWallpaper3.png') no-repeat center center fixed;
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        /*
+        @media (max-width: 600px) {
+        body {/*for mobile*/
+            /*background: url('blackbackgroundmobile.png') no-repeat center center fixed;
+            /*background-size: cover;   /* makes the image cover the whole section */
+            /*background-position: center; /* keeps the image centered */
+            /*background-repeat: no-repeat; /* prevents tiling/repeating */
+            /*max-width: 600px;
+            margin: 30px auto;
+            }
+        }
+
+        /* Top bar settings*/
+        .top-bar {
+            background-color: black;
+            padding: 8px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .top-bar a { /*class selector for all top-bars with class="top-bar"
+            a means it will apply the styles only to <a> tags (links), top and 
+            bottom text is links because of the <a> tag*/
+            color: white;
+            text-decoration: none; /*removes automatic underline from links*/
+            padding: 8px 15px;
+            background-color: #000000;
+            border-radius: 0px; /*creates rounded edges*/
+            transition: background-color 0.3s; /*for smooth animation*/
+        }
+        .top-bar a:hover {
+            background-color: #766560;
+        }
+
+        /* Bottom bar */
+        .bottom-bar {
+            color: rgb(255, 255, 255);
+            background-color: black;
+            padding: 10px;
+            position: fixed; /*position of content inside*/
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+         
+        .main-headline {/* Main headline */
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            font-family: "Ballet", system-ui;
+            font-weight: 600;
+            text-align: right;
+            width: 680px;
+            transform: translateY(-120px);
+            font-style: bold;
+            color: black;
+            font-size: 5em;
+
+            /*margin-top: 10vh;
+            margin-bottom: 25vh;*/
+            /* The section takes the full width of the viewport/parent */
+            /* Define the specific height you want for your rectangle */
+            height: auto; /* Adjust this value as needed */
+            text-shadow: 1px 1px 5px rgb(255, 255, 255);
+            /* Width, Style, Color */
+           /* border: 20px solid transparent; /* Required for border-image */
+            /*border-image: url("logoBackground.jpg") 30 stretch;*/
+            margin-bottom: 0;
+            padding-bottom: 0;
+            
+        }
+
+        .header1 {
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            font-family: "Almendra", serif;
+            font-size: 2em;
+            font-style: bold;
+            text-align: left;
+            color: rgba(0, 0, 0);
+            transform: translateX(600%);
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /*section dividers, Solid border */
+        hr.rounded {
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            border-top: 4px solid #000000;;
+            border-radius: 5px;
+            transform: translateX(30%);
+            width: 500px;
+        }
+        
+        .header2 { 
+            font-family: "Almendra", serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: left;
+            font-style: bold;
+            text-decoration: underline;
+            color: rgb(0, 0, 0);
+            transform: translateX(-65%);
+        }
+
+        .container1{
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            background-image: url('blogwall.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: -120px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 900px;
+            max-width: 1200px;
+            max-height: 3000px;
+            justify-content: center;
+            align-items: flex-start;
+            transform: translateX(-25%);
+            border: 10px ridge #000000;
+            border-width: 15px 10px 15px 10px; 
+            
+        }
+        .container1 div {
+            max-width: 100px;
+            height: auto;
+            margin: 5px;
+            border: 10px ridge #000000; 
+        }
+
+        .item {
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            align-self:flex-start;
+            margin: 10px;
+            /*border: 20px solid transparent; /* Required for border-image */
+            /*border-image: url("tile2.jpg") repeat ;*/
+            /*border-width: 0 20px 0 0;*/
+            transform: translateY(0%);
+
+        }
+
+        .container1 img {
+            object-fit: cover;
+            max-width: 250px;
+            height: 2800px;
+            display: block;
+       }
+
+        
+        .almendra-regular {
+            font-family: "Almendra", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        
+        .ballet-uniquifier {
+           font-family: "Ballet", cursive;
+           font-optical-sizing: auto;
+           font-weight: 400;
+           font-style: normal;
+         }
+        
+        
+         .close:hover {
+              color: #ccc;
+        }
+
+            
+    </style>
+</head>
+
+<body>
+
+     <!-- Top Bar content -->
+    <div class = "top-bar">
+        <a href = "index.html" class="almendra-regular">Gallery</a>
+        <a href = "blog.html" class="almendra-regular">Blog</a>
+        <a href = "about.html" class="almendra-regular">About</a>
+        <a href = "contact.html" class="almendra-regular">Contact</a>
+    </div>
+
+
+    <!-- Main Headline -->
+    <div class = "main-headline" >
+        <br>
+        iBlueberryypie
+    </div>
+
+    <div class = "container1">
+            <p class = "header1"> <b> Feed</b> <br> </p>
+            <hr class="rounded">
+            <img src= "blogsideimg.jpg" class="item" >
+            <br>    
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar"  >
+        <a class="p1"> </a>
+    </div>
+
+</body>
+</html>
