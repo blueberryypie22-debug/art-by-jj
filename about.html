@@ -9,109 +9,99 @@
 
       
       <style>
-       body { /*body settings for pc*/
+        body { /*body settings*//*for pc*/
+          background: url('digiWallpaper3.png') no-repeat center center fixed;
+          background-size: cover;   /* makes the image cover the whole section */
+          background-position: center; /* keeps the image centered */
+          background-repeat: no-repeat; /* prevents tiling/repeating */
+          width: 100%;
+          max-width: 1200px;
+          margin: 30px auto;
+          margin-top: -70px;
+        }
+
+        /* Top bar */
+        .top-bar {
+          background-color: black;
+          padding: 8px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 1000;
+        }
+        .top-bar a {
+          color: white;
+          text-decoration: none;
+          padding: 8px 15px;
+          background-color: #000000;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+        }
+        .top-bar a:hover {
+          background-color: #766560;
+        }
+
+        /* Bottom bar */
+        .bottom-bar {
+          color: rgb(255, 255, 255);
+          background-color: black;
+          padding: 10px;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+        }
+        .p1 {
+          /*outline: 3px solid rgba(255,0,0,0.4);*/
+          justify-content: center;
+          text-align: center;
+          margin-top: 400px;
+          font-family: "Almendra", serif;
+          font-size: 1.1em;
+          color: rgb(255, 255, 255); /* or whatever fits your design */
+          text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
+          width: 100%;
+          max-width: 1200px;
+          text-shadow: 2px 2px 5px black;
+        }
+
+        /*for mobile*/
+        @media (max-width: 600px) { 
+          body{
             margin: 0;
             font-family: "Jacquard 24", system-ui;
             font-weight: 400;
             font-style: normal;
             color: black;
-            background: url('digiWallpaper3.png');
+            background: url('digiWallpaper3.png') no-repeat center center fixed;
             background-size: cover;
             max-width: 100%;
-        }
-
-        /*for mobile*/
-        @media (max-width: 600px) {body{
-             margin: 0;
-            font-family: "Jacquard 24", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            color: black;
-            background: url('contactmobile.png');
-            background-size: cover;
-            max-width: 100%;
-          }}
-
-        /* Top bar */
-        .top-bar {
-            background-color: black;
-            padding: 8px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            background-color: #000000;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .top-bar a:hover {
-            background-color: #766560;
-        }
-
-        /* Bottom bar */
-        .bottom-bar {
-            color: rgb(255, 255, 255);
-            background-color: black;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-        }
-         /* Section for art; first and second painting  */
-
-        
-        .section1 h2 { /*for pc*/
+          }
+          .p1 {
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
             align-items: center;
             margin: auto;
-            margin-top: 30px;
-            margin-left: 25%;
-            margin-right: 25%;
-            margin-top: 10px;
+            margin-top: 300px;
+            font-family: "Almendra", serif;
             font-size: 1.1em;
             color: rgb(255, 255, 255); /* or whatever fits your design */
             text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
-            max-width: 800px;
+            width: 100%;
+            max-width: 350px;
             text-shadow: 2px 2px 5px black;
+         }
         }
 
-        /*for mobile*/
-        @media (max-width: 600px) { 
-          .section1 h2 {    
-           align-items: center;
-            margin: auto;
-            margin-left: 15%;
-            margin-right: 15%;
-            margin-top: 10px;
-            font-size: 1em;
-            color: rgb(255, 255, 255); /* or whatever fits your design */
-            text-shadow: 2px 2px 5px rgb(0, 0, 0); /* makes it readable on any background */
-            max-width: 800px;
-          }}
-
-          .almendra-regular {
-            font-family: "Almendra", serif;
-            font-weight: 400;
-            font-style: normal;}
-
-        .p1 {
-          /*outline: 3px solid rgba(255,0,0,0.4);*/
-          align-items: center;
+        .almendra-regular {
           font-family: "Almendra", serif;
-          transform: translateY(600%);
-        }
-        
+          font-weight: 400;
+          font-style: normal;}
     
        </style>
             
@@ -126,21 +116,13 @@
         <a href = "contact.html" class="almendra-regular">Contact</a>
     </div>
 
+    <div>
+      <h2 class="p1">iBlueberryypie is a place for creativity with no obvious direction or aim. Visiually mesmorising images and a feeling of lost time haunts these works. 
+      </h2>
+    </div>
 
-
-        <!-- Bottom Bar -->
-        <div class="bottom-bar"  >
-          <a class="p1"> </a>
-        </div>
-
-        <!-- Art Section 1 -->
-        <div class="section1">
-          <h2 class="p1">
-            <p> iBlueberryypie is a place for creativity with no obvious direction or aim. Visiually mesmorising images and a feeling of lost
-              time haunts these works. 
-            </p>
-          </h2>
-        </div>
+    <!-- Bottom Bar -->
+    <div class="bottom-bar"></div>
     
   </body>
 </html>

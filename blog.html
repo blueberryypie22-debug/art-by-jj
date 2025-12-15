@@ -8,7 +8,7 @@
  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet"> <!--ballet font-->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">>
+ <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,23 +21,13 @@
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
             background-repeat: no-repeat; /* prevents tiling/repeating */
-            max-width: 500px;
+            width: 100%;
+            max-width: 1200px;
             margin: 30px auto;
-        }
-        /*
-        @media (max-width: 600px) {
-        body {/*for mobile*/
-            /*background: url('blackbackgroundmobile.png') no-repeat center center fixed;
-            /*background-size: cover;   /* makes the image cover the whole section */
-            /*background-position: center; /* keeps the image centered */
-            /*background-repeat: no-repeat; /* prevents tiling/repeating */
-            /*max-width: 600px;
-            margin: 30px auto;
-            }
+            margin-top: -70px;
         }
 
-        /* Top bar settings*/
-        .top-bar {
+        .top-bar {/* Top bar settings*/
             background-color: black;
             padding: 8px;
             position: fixed;
@@ -49,6 +39,7 @@
             align-items: center;
             z-index: 1000;
         }
+
         .top-bar a { /*class selector for all top-bars with class="top-bar"
             a means it will apply the styles only to <a> tags (links), top and 
             bottom text is links because of the <a> tag*/
@@ -59,12 +50,12 @@
             border-radius: 0px; /*creates rounded edges*/
             transition: background-color 0.3s; /*for smooth animation*/
         }
+        
         .top-bar a:hover {
             background-color: #766560;
         }
 
-        /* Bottom bar */
-        .bottom-bar {
+        .bottom-bar {/* Bottom bar */
             color: rgb(255, 255, 255);
             background-color: black;
             padding: 10px;
@@ -76,126 +67,136 @@
             font-size: 14px;
         }
 
-         
         .main-headline {/* Main headline */
             /*outline: 3px solid rgba(255,0,0,0.4);*/
             font-family: "Ballet", system-ui;
             font-weight: 600;
             text-align: right;
-            width: 680px;
-            transform: translateY(-120px);
+            max-width: 1000px;
             font-style: bold;
             color: black;
             font-size: 5em;
-
-            /*margin-top: 10vh;
-            margin-bottom: 25vh;*/
-            /* The section takes the full width of the viewport/parent */
-            /* Define the specific height you want for your rectangle */
-            height: auto; /* Adjust this value as needed */
-            text-shadow: 1px 1px 5px rgb(255, 255, 255);
-            /* Width, Style, Color */
-           /* border: 20px solid transparent; /* Required for border-image */
-            /*border-image: url("logoBackground.jpg") 30 stretch;*/
+            text-shadow: 1px 1px 5px rgb(132, 132, 132);
             margin-bottom: 0;
             padding-bottom: 0;
-            
+            align-items: center;     /* Centers vertically */
+            justify-content: center;/* Centers horizontally */
+            transform: translateX(0%);
         }
 
-        .header1 {
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            font-family: "Almendra", serif;
-            font-size: 2em;
-            font-style: bold;
-            text-align: left;
-            color: rgba(0, 0, 0);
-            transform: translateX(600%);
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        /*section dividers, Solid border */
-        hr.rounded {
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            border-top: 4px solid #000000;;
-            border-radius: 5px;
-            transform: translateX(30%);
-            width: 500px;
-        }
-        
-        .header2 { 
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            font-family: "Almendra", serif;
-            font-size: 1.5em;
-            font-weight: 600;
-            text-align: left;
-            font-style: bold;
-            text-decoration: underline;
-            color: rgb(0, 0, 0);
-            transform: translateX(-65%);
-        }
-
-        .header3 { 
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            font-family: "Times New Roman", serif;
-            font-size: 1.3em;
-            font-weight: 550;
-            text-align: left;
-            color: rgb(0, 0, 0);
-            transform: translateX(70%);
-            width: 500px;
-            line-height: 1.5;
-        }
-
-        .container1{
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
+        .container {
             background-image: url('blogwallOG - Copy.png');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
-            margin-top: -120px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width: 900px;
+            display: grid;
+            width: 70%;
             max-width: 1200px;
-            height: 2900px;
-            max-height: 3000px;
-            align-items: flex-start;
-            transform: translateX(-25%);
+            grid-template-areas:
+             "side-img header1"
+             "side-img  content"
+             "side-img  content";
+            grid-template-columns: 1fr 3fr;/*controls width ratio of columns*/
+            grid-template-rows: 70px 2700px;
+            gap: 10px; /*inside dividers size, takes colour/style of background*/
             border: 10px ridge #000000;
-            border-width: 15px 10px 15px 10px; 
-            
+            transform: translateX(20%);
         }
-        .container1 div {
-            max-width: 100px;
-            height: auto;
-            margin: 5px;
-            border: 10px ridge #000000; 
-        }
-
-        .item {
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            align-self:flex-start;
-            margin: 10px;
-            /*border: 20px solid transparent; /* Required for border-image */
-            /*border-image: url("tile2.jpg") repeat ;*/
-            /*border-width: 0 20px 0 0;*/
-            transform: translateY(0%);
-
-        }
-
-        .container1 img {
-            /*outline: 3px solid rgba(255,0,0,0.4);*/
-            object-fit: cover;
-            max-width: 250px;
-            height: 2885px;
-            display: block;
-            position: fixed;
-            
-       }
-
         
+        /*properties of elements inside the container*/
+        .container div.header1 {/*main container header*/
+            grid-area: header1;
+            padding: 10px;
+            text-align: left;
+            text-shadow: 1px 1px 1px rgb(100, 86, 69);
+        }
+        .container div.side-img {/*menu section*/
+            grid-area: side-img;
+            padding: 10px;
+        }
+        #side-img{
+            background-image: url('blogsideimg.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: repeat-y;
+        }
+        .container div.content {
+            grid-area: content; /*content*/
+            max-height: 2700px;
+            padding: 10px;
+            text-align: left;
+            text-shadow: 1px 1px 1px rgb(100, 86, 69);
+        }
+
+        hr.rounded {
+        /*outline: 3px solid rgba(255,0,0,0.4);*/
+            border-top: 4px solid #000000;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-top: -15px;
+        }
+        .content-text{
+            font-size: 1.1em;
+            font-weight: 400;
+            line-height: 30px;
+            text-shadow: 3px 3px 3px rgb(100, 86, 69);
+        }
+        .content-date{
+            margin-top: -18px;
+        }
+
+        @media (max-width: 600px) {
+         body { 
+            background: url('whitebackground.png')fixed;
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            width: 100%;
+            max-width: 380px;
+            margin: auto;
+            margin-top: -70px;
+         }
+         .main-headline {/* Main headline */
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            font-family: "Ballet", system-ui;
+            font-weight: 600;
+            text-align: right;
+            max-width: 380px;
+            font-style: bold;
+            color: black;
+            font-size: 4em;
+            text-shadow: 1px 1px 5px rgb(132, 132, 132);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            align-items: center;     /* Centers vertically */
+            justify-content: center;/* Centers horizontally */
+            transform: translateX(0%);
+            margin-top: -10px;
+         }
+         .container {
+            background-image: url('blogwallOG - Copy.png');
+            background-size: cover;
+            background-position: center;
+            display: grid;
+            width: 100%;
+            max-width: 380px;
+            grid-template-areas:
+             "side-img header1"
+             "side-img  content"
+             "side-img  content";
+            grid-template-columns: 2fr 3fr;/*controls width ratio of columns*/
+            grid-template-rows: 70px 4000px;
+            gap: 2px; /*inside dividers size, takes colour/style of background*/
+            border: 2px ridge #000000;
+            transform: translateX(-1%);
+         }
+            #side-img{
+            background-image: url('blogsideimg.jpg');
+            background-size: contain;
+            background-repeat: repeat-y;
+            background-position: center;
+         }
+        }
+
         .almendra-regular {
             font-family: "Almendra", serif;
             font-weight: 400;
@@ -204,15 +205,15 @@
 
         
         .ballet-uniquifier {
-           font-family: "Ballet", cursive;
-           font-optical-sizing: auto;
-           font-weight: 400;
-           font-style: normal;
+            font-family: "Ballet", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
          }
         
         
          .close:hover {
-              color: #ccc;
+            color: #ccc;
         }
 
             
@@ -236,28 +237,36 @@
         iBlueberryypie
     </div>
 
-    <div class = "container1">
-            <p class = "header1"> <b> Feed</b> <br> </p>
-            <hr class="rounded">
-            <p class = "header3">  Back in School . . . . . . . . . . . . . . . . . . . . . . .  December 25 <br><br>Last week I had a nightmare. Unlike every night that I have a nightmare, this one was when I was a little girl, in primary school to be exact.
-                 I was running around school with my friend getting up to no good and dodging teachers to not be spotted and forced to go back to class, which is something I only grew the courage to do in my final year of high school.
-                  In my dream I was wearing the school uniform- my white cotton hijab that I rocked to school every day with my worn-down "Sid-ria," a long overall black dress made of thin fabrics to help us endure the heat,
-                   underneath it- a white long-sleeved shirt. My friend and I eventually got back to our class that was on recess, so girls were all over talking amongst each other and giggling.
-                    In my dream I was charming, and I was anything but charming as a kid. I struggled a lot talking to people my age, so I just kept to myself to save me the embarrassment. 
-                    At some point I heard screaming coming from down the hall. No one in class seemed to have heard it, so I went looking out the class door, and I saw splattered blood everywhere on the hallway walls with lifeless, bloodied-up bodies in school uniforms laid up all over.
-                     Then a group of girls came running across the hall screaming with a man chasing after them holding a giant bloody kitchen knife. He was frothing at the mouth and hungry to kill some more.
-                      I went back in class and took my friend's hand and started running towards the front gate. Our school had gates that got locked at exactly 8a.m. and opened at 1p.m., no one was allowed to come in or out during this time,
-                       and the school walls were too high for anyone to jump over. The principal's office and staff room were by the front gate, and as we snuck by their doorway, we noticed that they had no idea. what was going on inside the school.
-                        As we got to the front gate, I searched for a crossing to escape, which I found easily by the front garden, and then I carried my friend up and over, and we crawled on the edges to reach the main street. 
-                        From there it was like hell let loose, hundreds of girls came running and crossed over right after us and continued their running in all directions. 
-                        The city was in ruins, more so than it normally is. I said goodbye to my friend by the main street as we decided to try and beat the loose killer to our homes. 
-                        I was very scared, constantly looking over my shoulder and imagining what it feels like to be stabbed in the gut. I shook that thought out of my head and continued my pilgrimage home. 
-                        In reality, the walk home from my school was 5 minutes, but in my dream I walked and walked endlessly through dingy, unpaved streets. 
-                        I don't know what happened to the killer after that, but I remember that eventually I made it home.
-                 </p>
+    <div class = "container">
 
-            <img src= "blogsideimg.jpg" class="item" >
-            <br>
+            <div class = "header1">
+                <h1> Feed </h1>
+                <hr class="rounded">
+            </div>
+
+            <div class="side-img" id="side-img" ></div>
+
+            <div class = "content">
+             <h2>  Back in School</h2>
+             <p class="content-date">December 25</p>
+             <p class="content-text"> Last week I had a nightmare. Unlike every night that I have a nightmare, this one was when I was a little girl, in primary school to be exact.
+                I was running around school with my friend getting up to no good and dodging teachers to not be spotted and forced to go back to class, which is something I only grew the courage to do in my final year of high school.<br>
+                In my dream I was wearing the school uniform- my white cotton hijab that I rocked to school every day with my worn-down "Sid-ria," a long overall black dress made of thin fabrics to help us endure the heat,
+                underneath it- a white long-sleeved shirt. My friend and I eventually got back to our class that was on recess, so girls were all over talking amongst each other and giggling.
+                In my dream I was charming, and I was anything but charming as a kid. I struggled a lot talking to people my age, so I just kept to myself to save me the embarrassment. <br>
+                At some point I heard screaming coming from down the hall. No one in class seemed to have heard it, so I went looking out the class door, and I saw splattered blood everywhere on the hallway walls with lifeless, bloodied-up bodies in school uniforms laid up all over.
+                Then a group of girls came running across the hall screaming with a man chasing after them holding a giant bloody kitchen knife. He was frothing at the mouth and hungry to kill some more.
+                I went back in class and took my friend's hand and started running towards the front gate. Our school had gates that got locked at exactly 8a.m. and opened at 1p.m., no one was allowed to come in or out during this time,
+                and the school walls were too high for anyone to jump over. The principal's office and staff room were by the front gate, and as we snuck by their doorway, we noticed that they had no idea. what was going on inside the school.
+                As we got to the front gate, I searched for a crossing to escape, which I found easily by the front garden, and then I carried my friend up and over, and we crawled on the edges to reach the main street. 
+                From there it was like hell let loose, hundreds of girls came running and crossed over right after us and continued their running in all directions. 
+                The city was in ruins, more so than it normally is. I said goodbye to my friend by the main street as we decided to try and beat the loose killer to our homes. <br>
+                I was very scared, constantly looking over my shoulder and imagining what it feels like to be stabbed in the gut. I shook that thought out of my head and continued my pilgrimage home. 
+                In reality, the walk home from my school was 5 minutes, but in my dream I walked and walked endlessly through dingy, unpaved streets. 
+                I don't know what happened to the killer after that, but I remember that eventually I made it home.
+             </p> 
+            </div>
+
     </div>
 
     <!-- Bottom Bar -->

@@ -18,27 +18,20 @@
     <!--https://blueberryypie22-debug.github.io/art-by-jj-->
 
     <style> 
-        body { /*body settings*//*for pc*/
+     /*////////////////////*PC SECTION//////////////////////*/
+
+        body { /*body settings*/
             background: url('digiWallpaper3.png') no-repeat center center fixed;
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
             background-repeat: no-repeat; /* prevents tiling/repeating */
-            max-width: 500px;
-            margin: 30px auto;
-        }
-                
-        @media (max-width: 600px) {
-        body {/*for mobile*/
-            background: url('blackbackgroundmobile.png') no-repeat center center fixed;
-            background-size: cover;   /* makes the image cover the whole section */
-            background-position: center; /* keeps the image centered */
-            background-repeat: no-repeat; /* prevents tiling/repeating */
-            max-width: 600px;
-            margin: 30px auto;
-            }
+            width:100% ;
+            max-width:1480px;
+            overflow-x: hidden;
+            margin: 30px auto; /*adds margin bwtween bottom bar and other content*/
         }
 
-        /* Top bar settings*/
+         /* Top bar settings*/
         .top-bar {
             background-color: black;
             padding: 8px;
@@ -86,39 +79,16 @@
             color: black;
             text-align: center;
             font-size: 5em;
-            /*margin-top: 10vh;
-            margin-bottom: 25vh;*/
-            /* The section takes the full width of the viewport/parent */
-            width: 1470px;
-            /* Define the specific height you want for your rectangle */
-            height: 620px; /* Adjust this value as needed */
-            transform: translateX(-33.5%);
-            text-shadow: 1px 1px 5px rgb(255, 255, 255);
+            width: 100%;
+            max-width:1458px;
+            height: 664px; /* Adjust this value as needed */
+            transform: translateX(0%);
+            text-shadow: 1px 1px 5px rgb(111, 111, 111);
             background-image: url("logoBackground.jpg");
             background-size: cover;   /* makes the image cover the whole section */
             background-position: center; /* keeps the image centered */
             border: 10px ridge #000000; /* Width, Style, Color */
-            /*border: 20px solid transparent; /* Required for border-image 
-            border-image: url("vintageBorder2 T.jpg") 30 stretch;*/
-            
         }
-        
-        /* Section for art; first and second painting  */
-          /*
-        @media (max-width: 600px) {
-        .section1 {/*for mobile
-            background-image: url("sectionbackground.png");
-            background-size: cover;   
-            background-position: center; 
-            background-repeat: no-repeat; 
-            padding: 30px; 
-            margin: 30px auto; 
-            border-radius: 10px;
-            margin: 0 auto 20px auto;
-            max-width: 100%;
-
-        }
-        }*/
         
         .header1 {
             font-family: "Almendra", serif;
@@ -126,14 +96,15 @@
             font-style: bold;
             text-align: left;
             color: rgba(0, 0, 0);
-            transform: translateX(-80%);
+            transform: translateX(5%);
         }
+        
         /*section dividers, Solid border */
         hr.rounded {
             border-top: 4px solid #000000;;
             border-radius: 5px;
-            transform: translateX(-32%);
-            width: 1300px;
+            transform: translateX(0%);
+            width:95% ;
         }
         
         .header2 { 
@@ -144,19 +115,20 @@
             font-style: bold;
             text-decoration: underline;
             color: rgb(0, 0, 0); /* or whatever fits your design */
-            transform: translateX(-65%);
+            transform: translateX(5%);
         }
+        
 
         .container1{
             /*outline: 3px solid rgba(255,0,0,0.4);*/
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 1470px;
-            max-width: 1400px;
+            width: 95%;
+            max-width:1500px;
             justify-content: center;
             align-items: flex-start;
-            transform: translateX(-32%);
+            transform: translateX(2%);
             
         }
         .container1 div {
@@ -172,6 +144,41 @@
             display: block;
        }
 
+       /*////////////////////*MOBILE SECTION//////////////////////*/
+
+        @media (max-width: 600px) {   /*IMPORTANT: max-width does not override width*/
+
+            body { /*body settings*/
+            background: url('whitebackground.png')fixed;
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            background-repeat: no-repeat; /* prevents tiling/repeating */
+            width:100% ;
+            max-width: 380px;
+            overflow-x: hidden;
+            margin: 30px auto; /*adds margin bwtween bottom bar and other content*/
+            }
+
+            .main-headline {/* Main headline */
+            /*outline: 3px solid rgba(255,0,0,0.4);*/
+            font-family: "Ballet", system-ui;
+            font-weight: 700;
+            font-style: bold;
+            color: black;
+            text-align: center;
+            font-size: 4em;
+            width: 100%;
+            max-width: 380px;
+            height: 710px; /* Adjust this value as needed */
+            transform: translate(-4%);
+            text-shadow: 1px 1px 5px rgb(111, 111, 111);
+            background-image: url("logoBackground.jpg");
+            background-size: cover;   /* makes the image cover the whole section */
+            background-position: center; /* keeps the image centered */
+            border: 19px ridge #000000; /* Width, Style, Color */
+
+            }
+            }
         
         .almendra-regular {
             font-family: "Almendra", serif;
@@ -233,7 +240,6 @@
         .close:hover {
               color: #ccc;
         }
-
             
     </style>
 </head>
@@ -258,20 +264,23 @@
     </div>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+
 
     <div class = "header1"> <b> Collections</b> <br> </div>
     <hr class="rounded">
     <br>    
     
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
     <div class = header2> Prints </div>
     <div class = "container1">
         <div><img src= "digiWallpaper1.png" class="clickable-image" > </div>
         <div><img src= "digiwallpaper2_03.jpg" class="clickable-image" > </div>
         <div><img src= "blogwallmini.jpg" class="clickable-image" > </div>
-        <div><img src= "tiles.png" class="clickable-image" > </div>
+        <div><img src= "tiles13.png" class="clickable-image" > </div>
         <div><img src= "BOtile.png" class="clickable-image" > </div>
         <div><img src= "projectAnimal.jpg" class="clickable-image" > </div>
         
@@ -297,16 +306,9 @@
         <div><img src= "Edalejpg.jpg" class="clickable-image" > </div>
         <div><img src= "devonshire.jpg" class="clickable-image" > </div>
     </div>
-
-
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="fullImage">
-    </div>
-
     
 
-   <script>
+    <script>
        // Get modal elements
       const modal = document.getElementById("imageModal");
       const modalImg = document.getElementById("fullImage");
@@ -336,7 +338,6 @@
 
     <!-- Bottom Bar -->
     <div class="bottom-bar"  >
-        <a class="p1"> </a>
     </div>
 
 </body>
